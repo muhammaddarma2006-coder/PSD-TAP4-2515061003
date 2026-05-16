@@ -38,7 +38,13 @@ Potongan kode pada gambar terakhir ini merupakan bagian paling awal dari program
 
 Fungsi push_air(volume_ml) ini diawali dengan perintah n = len(ember_air) yang bertugas untuk menghitung jumlah gayung air yang saat ini sudah berada di dalam ember. Masuk ke baris berikutnya, terdapat struktur percabangan if n >= MAX_KAPASITAS: yang berfungsi sebagai sistem validasi untuk memeriksa apakah jumlah air saat ini sudah menyentuh atau melewati batas maksimal tampungan yang diperbolehkan. Jika kondisi tersebut terpenuhi atau bernilai benar, program akan langsung membatalkan pengisian dan mencetak pesan peringatan ke layar bahwa air akan tumpah karena ember sudah penuh, yang dalam istilah struktur data dikenal dengan sebutan Stack Overflow. Namun, jika kondisi tersebut tidak terpenuhi atau ember masih memiliki ruang, program akan meloncat ke blok else: dan mengeksekusi perintah ember_air.append(volume_ml). Perintah append inilah yang menjadi mesin utama dari operasi Push, di mana data volume air yang baru dimasukkan akan ditumpuk di posisi paling atas atau di akhir baris array, kemudian diakhiri dengan mencetak pesan konfirmasi bahwa air berhasil ditambahkan ke dalam ember.
 
+
+
+
 Output
+
+
+
 ![image alt](https://github.com/muhammaddarma2006-coder/PSD-TAP4-2515061003/blob/e164506f21300f56d8534f3415425a48e287569f/Screenshot%20(2464).png)
 
 
