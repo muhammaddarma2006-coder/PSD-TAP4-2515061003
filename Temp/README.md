@@ -9,6 +9,8 @@ Input
 
 
 ![image alt](https://github.com/muhammaddarma2006-coder/PSD-TAP4-2515061003/blob/e164506f21300f56d8534f3415425a48e287569f/Screenshot%20(2471).png)
+
+
 Fungsi main() diawali dengan mencetak judul simulasi ke layar dan langsung memasuki perulangan while True yang bertugas menjalankan menu interaktif secara terus-menerus hingga pengguna memilih untuk keluar. Di dalam perulangan ini, program menghitung jumlah gayung air saat ini menggunakan perintah n = len(ember_air) untuk kemudian menampilkan status keterisian ember secara real-time kepada pengguna sebelum menyajikan tiga pilihan tindakan.
 
 Ketika pengguna memilih menu nomor satu, program akan meminta input volume air dalam satuan mililiter yang divalidasi menggunakan struktur try-except agar sistem tidak mengalami error jika pengguna salah memasukkan karakter selain angka. Jika input tersebut adalah angka yang lebih besar dari nol, variabel volume akan dikirim ke fungsi push_air(volume) untuk dimasukkan ke dalam tumpukan, namun jika input tidak valid, program akan langsung menampilkan pesan peringatan.
@@ -28,13 +30,23 @@ Potongan kode pada gambar terakhir ini merupakan bagian paling awal dari program
 
 
 ![image alt](https://github.com/muhammaddarma2006-coder/PSD-TAP4-2515061003/blob/e164506f21300f56d8534f3415425a48e287569f/Screenshot%20(2470).png)
+
+
 Fungsi push_air(volume_ml) ini diawali dengan perintah n = len(ember_air) yang bertugas untuk menghitung jumlah gayung air yang saat ini sudah berada di dalam ember. Masuk ke baris berikutnya, terdapat struktur percabangan if n >= MAX_KAPASITAS: yang berfungsi sebagai sistem validasi untuk memeriksa apakah jumlah air saat ini sudah menyentuh atau melewati batas maksimal tampungan yang diperbolehkan. Jika kondisi tersebut terpenuhi atau bernilai benar, program akan langsung membatalkan pengisian dan mencetak pesan peringatan ke layar bahwa air akan tumpah karena ember sudah penuh, yang dalam istilah struktur data dikenal dengan sebutan Stack Overflow. Namun, jika kondisi tersebut tidak terpenuhi atau ember masih memiliki ruang, program akan meloncat ke blok else: dan mengeksekusi perintah ember_air.append(volume_ml). Perintah append inilah yang menjadi mesin utama dari operasi Push, di mana data volume air yang baru dimasukkan akan ditumpuk di posisi paling atas atau di akhir baris array, kemudian diakhiri dengan mencetak pesan konfirmasi bahwa air berhasil ditambahkan ke dalam ember.
 
 Output
 ![image alt](https://github.com/muhammaddarma2006-coder/PSD-TAP4-2515061003/blob/e164506f21300f56d8534f3415425a48e287569f/Screenshot%20(2464).png)
+
+
 menunjukkan kondisi awal saat simulasi baru saja dijalankan oleh sistem. Pada baris pertama, program mencetak teks judul sebagai penanda bahwa pengguna telah masuk ke dalam menu simulasi kapasitas air ember berbasis metode Stack Array. Tepat di bawah judul tersebut, sistem langsung menampilkan status kondisi ember secara real-time, di mana terlihat tulisan total isi masih berukuran nol dari batas maksimal lima gayung, yang disertai dengan tampilan visual array berupa kurung siku kosong karena memang belum ada data air yang dimasukkan.
+
+
 ![image alt](https://github.com/muhammaddarma2006-coder/PSD-TAP4-2515061003/blob/e164506f21300f56d8534f3415425a48e287569f/Screenshot%20(2466).png)
+
+
 ini kelanjutan proses ketika ember sudah terisi penuh dan pengguna mencoba memasukkan air lagi. program segera mengalirkan input tersebut ke dalam sistem validasi logika fungsi penambahan. Karena jumlah data sudah menyentuh batas tertinggi, program langsung memicu kondisi pengaman dengan menolak pengisian tersebut serta mencetak pesan peringatan bahwa tindakan gagal dilakukan karena air akan meluap, yang secara visual membuktikan terjadinya fenomena Stack Overflow pada tumpukan.
+
+
 ![image alt](https://github.com/muhammaddarma2006-coder/PSD-TAP4-2515061003/blob/e164506f21300f56d8534f3415425a48e287569f/Screenshot%20(2465).png)
 
 Setelah pengguna menjatuhkan pilihan pada menu nomor, sistem langsung memunculkan perintah untuk  mengambil jumlah volume air di ember, di mana pengguna kemudian mengetikkan angka opsi 2 pada sistem menu. Program segera memproses input tersebut melalui fungsi penambahan, memasukkannya ke dalam urutan list terakhir, dan langsung mencetak pesan konfirmasi sukses yang menyatakan bahwa air sebanyak 600 mililiter telah berhasil mengambil air lapisan teratas dari ember.
