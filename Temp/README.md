@@ -20,12 +20,16 @@ Selanjutnya, jika pengguna memilih menu nomor dua, program akan langsung mengeks
 
 
 ![image alt](https://github.com/muhammaddarma2006-coder/PSD-TAP4-2515061003/blob/e164506f21300f56d8534f3415425a48e287569f/Screenshot%20(2468).png)
+
+
 Fungsi pop_air() ini diawali dengan perintah n = len(ember_air) yang bertugas untuk menghitung berapa jumlah total gayung air yang saat ini sedang tertampung di dalam ember. Masuk ke baris berikutnya, terdapat struktur pengkondisian if n == 0: yang berfungsi sebagai sistem validasi untuk memastikan bahwa ember tidak dalam keadaan kosong sebelum proses pengambilan air dilakukan. Jika kondisi tersebut terpenuhi atau bernilai benar, program akan membatalkan tindakan dan mencetak pesan peringatan ke layar bahwa air gagal diambil karena ember sudah benar-benar kosong, yang dalam istilah struktur data dikenal dengan sebutan Stack Underflow.
 
 Namun, jika kondisi tersebut tidak terpenuhi atau ember terbukti masih berisi air, program akan langsung meloncat ke blok else: untuk mengeksekusi perintah air_keluar = ember_air.pop(). Perintah pop() inilah yang menjadi mesin utama dari operasi ini, di mana sistem secara otomatis akan mengambil sekaligus menghapus data volume air yang berada di lapisan paling atas atau yang paling terakhir dimasukkan ke dalam array. Setelah data tersebut berhasil dikeluarkan dan disimpan sementara di dalam variabel air_keluar, fungsi ini diakhiri dengan mencetak pesan konfirmasi ke layar yang menginformasikan kepada pengguna mengenai jumlah mililiter air yang baru saja berhasil diciduk dari ember.
 
 
 ![image alt](https://github.com/muhammaddarma2006-coder/PSD-TAP4-2515061003/blob/e164506f21300f56d8534f3415425a48e287569f/Screenshot%20(2469).png)
+
+
 Potongan kode pada gambar terakhir ini merupakan bagian paling awal dari program yang berfungsi untuk menyiapkan basis data serta melakukan konfigurasi awal sebelum simulasi dijalankan. Bagian ini diawali dengan pembuatan konstanta MAX_KAPASITAS = 5 yang bertugas menetapkan batas tertinggi kapasitas tampungan ember, di mana angka lima ini mengunci jumlah maksimal gayung air yang diperbolehkan masuk ke dalam sistem memori program. Tepat di bawahnya, terdapat deklarasi variabel ember_air = [] yang membuat sebuah List atau Array kosong sebagai wadah utama untuk menampung seluruh data volume air yang akan dimasukkan nantinya. Bagian ini sangat penting karena berfungsi sebagai fondasi tempat penyimpanan terpusat, sehingga fungsi-fungsi lain seperti penambahan air (Push) maupun pengambilan air (Pop) dapat mengelola data yang sama secara sinkron sepanjang simulasi berjalan.
 
 
